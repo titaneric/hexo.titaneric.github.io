@@ -12,6 +12,7 @@
 #         Example: DEPLOY_REPO=https://6b75cfe9836f56e6d21187622730889874476c23@github.com/jkeylu/test-hexo-on-travis-ci.git
 
 language: node_js
+cache: npm
 
 node_js:
 - lts/*
