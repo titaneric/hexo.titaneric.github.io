@@ -20,7 +20,7 @@ Example：
 
 ### blade or HTML
 
-```htmlembedded=
+```html
 <form>
     <input type="text" id="g-recaptcha-response" name="g-recaptcha-response" style="display: none;">
     <input type="name" id="name">
@@ -29,7 +29,8 @@ Example：
 ```
 
 ### blade or JS
-```htmlembedded=
+
+```html
 <script src='https://www.google.com/recaptcha/api.js?render=SITE_KEY'></script>
 <script>
   grecaptcha.ready(function() {
@@ -43,7 +44,8 @@ Example：
 ```
 
 ### php
-```php=
+
+```php
 public function recaptchaCheck($recaptchaToken, $action)
 {
     $secret_key = config('app.NOCAPTCHA_SECRET');
