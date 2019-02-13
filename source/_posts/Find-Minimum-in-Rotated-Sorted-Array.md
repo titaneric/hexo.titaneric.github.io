@@ -14,6 +14,8 @@ Suppose an array sorted in ascending order is rotated at some pivot unknown to y
 Find the minimum element.
 You may assume no duplicate exists in the array.
 
+---
+
 ## Example
 
 ### Example 1
@@ -29,6 +31,8 @@ Output: 1
 Input: [4, 5, 6, 7, 0, 1, 2]
 Output: 0
 ```
+
+---
 
 ## Solution
 
@@ -53,6 +57,8 @@ Furthermore,
 
 - All the elements to the left of inflection point > first element of the array.
 - All the elements to the right of inflection point < first element of the array.
+
+---
 
 #### Algorithm
 
@@ -80,6 +86,8 @@ Furthermore,
 
 Time Complexity: $O(log\,n)$
 Space Complexity: $O(1)$
+
+---
 
 #### Code
 
