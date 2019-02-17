@@ -2,6 +2,7 @@
 title: recaptcha
 date: 2019-01-14 23:31:59
 tags:
+ - web
 ---
 # recaptcha v3
 
