@@ -299,6 +299,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/02/17/Updating-a-Dictionary/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eric Huang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Playground">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/17/Updating-a-Dictionary/" class="post-title-link" itemprop="url">Updating-a-Dictionary</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-17 17:34:44 / Modified: 09:37:56" itemprop="dateCreated datePublished" datetime="2019-02-17T17:34:44+00:00">2019-02-17</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Updating-a-Dictionary"><a href="#Updating-a-Dictionary" class="headerlink" title="Updating a Dictionary"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=3948" target="_blank" rel="noopener">Updating a Dictionary</a></h1><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ol>
+<li>Use the regex to parse key, value.</li>
+<li>Save the parsed keys, values to real map.</li>
+<li>Compare two maps.<ol>
+<li>Use the overloading = operator to compare if two maps have no difference.</li>
+<li>The intersection between current map’s keys and previous map’s keys is possible the edit one or equal one.</li>
+<li>The difference between current map and intersection mentioned at 3.2 is the new one.</li>
+<li>The difference between previous map and intersection mentioned at 3.2 is the delete one.</li>
+<li>At last, filter the keys that corresponding value of current map and previous map are not the same. That is the edit one.</li>
+</ol>
+</li>
+</ol>
+<h2 id="What-I-learn"><a href="#What-I-learn" class="headerlink" title="What I learn"></a>What I learn</h2><ol>
+<li>Use the regex lib at C++ for the first time.</li>
+<li>Practice the C++ 11. E.g., copy_if, lambda.</li>
+</ol>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;regex&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iterator&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">regex <span class="title">key_regex</span><span class="params">(<span class="string">"([a-z]+)"</span>)</span></span>;</span><br><span class="line"><span class="function">regex <span class="title">value_regex</span><span class="params">(<span class="string">"([0-9]+)"</span>)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">parse2Dict</span><span class="params">(<span class="built_in">string</span> &amp;line, <span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; &amp;dict)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> key_begin = sregex_iterator(line.begin(), line.end(), key_regex);</span><br><span class="line">    <span class="keyword">auto</span> key_end = sregex_iterator();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> value_begin = sregex_iterator(line.begin(), line.end(), value_regex);</span><br><span class="line">    <span class="keyword">auto</span> value_end = sregex_iterator();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> k = key_begin, v = value_begin; k != key_end &amp;&amp; v != value_end; ++k, ++v)</span><br><span class="line">    &#123;</span><br><span class="line">        dict[k-&gt;str()] = v-&gt;str();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">output</span><span class="params">(<span class="keyword">char</span> op, <span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; &amp;target)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; target_vec(target.begin(), target.end());</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; op;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> k : target_vec)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; k;</span><br><span class="line">        <span class="keyword">if</span> (k != target_vec.back())</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">","</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">compareDict</span><span class="params">(<span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; &amp;previous, <span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; &amp;current)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (previous == current)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"No changes\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; previous_key;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> iter : previous)</span><br><span class="line">        &#123;</span><br><span class="line">            previous_key.insert(iter.first);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; current_key;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> iter : current)</span><br><span class="line">        &#123;</span><br><span class="line">            current_key.insert(iter.first);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// *</span></span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; possible_star;</span><br><span class="line">        set_intersection(current_key.begin(), current_key.end(), previous_key.begin(), previous_key.end(), inserter(possible_star, possible_star.begin()));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// +</span></span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; plus;</span><br><span class="line">        set_difference(current_key.begin(), current_key.end(), possible_star.begin(), possible_star.end(), inserter(plus, plus.begin()));</span><br><span class="line">        <span class="keyword">if</span> (plus.size())</span><br><span class="line">            output(<span class="string">'+'</span>, plus);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// -</span></span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; minus;</span><br><span class="line">        set_difference(previous_key.begin(), previous_key.end(), possible_star.begin(), possible_star.end(), inserter(minus, minus.begin()));</span><br><span class="line">        <span class="keyword">if</span> (minus.size())</span><br><span class="line">            output(<span class="string">'-'</span>, minus);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// *</span></span><br><span class="line">        <span class="built_in">set</span>&lt;<span class="built_in">string</span>&gt; star;</span><br><span class="line">        copy_if(possible_star.begin(), possible_star.end(), inserter(star, star.begin()), [&amp;](<span class="built_in">string</span> k) &#123; <span class="keyword">return</span> current[k] != previous[k]; &#125;);</span><br><span class="line">        <span class="keyword">if</span> (star.size())</span><br><span class="line">            output(<span class="string">'*'</span>, star);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">string</span> line;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    getline(<span class="built_in">cin</span>, line);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        getline(<span class="built_in">cin</span>, line);</span><br><span class="line">        <span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; previous_map;</span><br><span class="line">        parse2Dict(line, previous_map);</span><br><span class="line"></span><br><span class="line">        getline(<span class="built_in">cin</span>, line);</span><br><span class="line">        <span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt; current_map;</span><br><span class="line">        parse2Dict(line, current_map);</span><br><span class="line"></span><br><span class="line">        compareDict(previous_map, current_map);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/02/14/Search-in-Rotated-Sorted-Array/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -361,7 +519,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-17 08:34:18" itemprop="dateModified" datetime="2019-02-17T08:34:18+00:00">2019-02-17</time>
+                <time title="Modified: 2019-02-17 09:37:56" itemprop="dateModified" datetime="2019-02-17T09:37:56+00:00">2019-02-17</time>
               
             
           </span>
@@ -552,7 +710,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-17 08:34:18" itemprop="dateModified" datetime="2019-02-17T08:34:18+00:00">2019-02-17</time>
+                <time title="Modified: 2019-02-17 09:37:56" itemprop="dateModified" datetime="2019-02-17T09:37:56+00:00">2019-02-17</time>
               
             
           </span>
@@ -725,7 +883,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-17 08:34:18" itemprop="dateModified" datetime="2019-02-17T08:34:18+00:00">2019-02-17</time>
+                <time title="Modified: 2019-02-17 09:37:56" itemprop="dateModified" datetime="2019-02-17T09:37:56+00:00">2019-02-17</time>
               
             
           </span>
@@ -858,7 +1016,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -881,7 +1039,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
@@ -1065,6 +1223,8 @@
 
   
   
+    
+      
     
       
     
