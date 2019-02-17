@@ -1,10 +1,31 @@
 ---
 title: Updating-a-Dictionary
 tags:
- - problem
- - c++
+  - problem
+  - c++
+date: 2019-02-17 17:34:44
 ---
 
+
+# [Updating a Dictionary](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3948)
+
+## Solution
+
+1. Use the regex to parse key, value.
+2. Save the parsed keys, values to real map.
+3. Compare two maps.
+    1. Use the overloading = operator to compare if two maps have no difference.
+    2. The intersection between current map's keys and previous map's keys is possible the edit one or equal one.
+    3. The difference between current map and intersection mentioned at 3.2 is the new one.
+    4. The difference between previous map and intersection mentioned at 3.2 is the delete one.
+    5. At last, filter the keys that corresponding value of current map and previous map are not the same. That is the edit one.
+
+## What I learn
+
+1. Use the regex lib at C++ for the first time.
+2. Practice the C++ 11. E.g., copy_if, lambda.
+
+## Code
 ```c++
 #include <iostream>
 #include <map>
