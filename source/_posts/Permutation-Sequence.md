@@ -157,7 +157,7 @@ group index = 0
 
 Select 2
 
-new candidates = `[2]`
+new candidates = `[3]`
 new k = $0 \% (2 - 1)! = 0$
 
 ---
@@ -165,17 +165,17 @@ new k = $0 \% (2 - 1)! = 0$
 Finally...
 ```
 k = 0
-candidates = [2]
+candidates = [3]
 ```
 Group index = $0 / (1 - 1)! = 0$
 ```
-candidates = [2]
+candidates = [3]
               0
 
 group index = 0
 ```
 
-Select 2
+Select 3
 
 ---
 
