@@ -107,7 +107,7 @@ Verify it!
      ^
 ```
 
-[How?](https://hackmd.io/p/HJQTi-kEE#/)
+{% post_link Find-Minimum-in-Rotated-Sorted-Array %}
 
 ---
 
