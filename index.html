@@ -299,6 +299,1310 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/03/11/Letter-Combinations-of-a-Phone-Number/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eric Huang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Playground">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/11/Letter-Combinations-of-a-Phone-Number/" class="post-title-link" itemprop="url">Letter_Combinations_of_a_Phone_Number</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-11 01:20:49" itemprop="dateCreated datePublished" datetime="2019-03-11T01:20:49+00:00">2019-03-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-10 17:43:37" itemprop="dateModified" datetime="2019-03-10T17:43:37+00:00">2019-03-10</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Letter-Combinations-of-a-Phone-Number-17"><a href="#Letter-Combinations-of-a-Phone-Number-17" class="headerlink" title="Letter Combinations of a Phone Number (#17)"></a><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank" rel="noopener">Letter Combinations of a Phone Number (#17)</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent.</p>
+<p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</p>
+<p><img src="https://i.imgur.com/rmmhD3d.png" alt=""></p>
+<hr>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;23&quot;</span><br><span class="line">Output: [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><h3 id="Recursive-function"><a href="#Recursive-function" class="headerlink" title="Recursive function"></a>Recursive function</h3><ul>
+<li>Self called function</li>
+<li>Need to define the terminated condition and return</li>
+</ul>
+<h3 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h3><ul>
+<li>Recursive function</li>
+<li>Only return when reached the boundary condition (e.g., array tail and tree leaf reached)</li>
+</ul>
+<hr>
+<h3 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h3><ul>
+<li>Similar to DFS, but when you get the result, you need to continue to get the next solution.</li>
+<li>Useful trick to solve combination-related problem</li>
+<li>When getting the satisfied result, need to <strong>backtracking</strong> to last caller.</li>
+</ul>
+<hr>
+<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><ol>
+<li>Check the length of incoming combination. If it equals to the digits length, go to 2. Otherwise, goto 3.</li>
+<li>Save the combination and return to its caller (i.e. goto 3.2).</li>
+<li>Use the length of combination to access digit, iterate all mapping characters<br> 3.1 Push the character into combination and goto 1.<br> 3.2 Pop the last element of combination, and goto 3.</li>
+</ol>
+<hr>
+<h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><hr>
+<div id="graphviz-0"></div>
+
+<hr>
+<div id="graphviz-1"></div>
+
+<hr>
+<div id="graphviz-2"></div>
+
+<hr>
+<div id="graphviz-3"></div>
+
+<hr>
+<div id="graphviz-4"></div>
+
+<hr>
+<div id="graphviz-5"></div>
+
+<hr>
+<div id="graphviz-6"></div>
+
+<hr>
+<div id="graphviz-7"></div>
+
+<hr>
+<div id="graphviz-8"></div>
+
+<hr>
+<div id="graphviz-9"></div>
+
+<hr>
+<div id="graphviz-10"></div>
+
+<hr>
+<div id="graphviz-11"></div>
+
+<hr>
+<div id="graphviz-12"></div>
+
+<hr>
+<div id="graphviz-13"></div>
+
+<hr>
+<div id="graphviz-14"></div>
+
+<hr>
+<div id="graphviz-15"></div>
+
+<hr>
+<div id="graphviz-16"></div>
+
+<hr>
+<div id="graphviz-17"></div>
+
+<hr>
+<div id="graphviz-18"></div>
+
+<hr>
+<div id="graphviz-19"></div>
+
+<hr>
+<div id="graphviz-20"></div>
+
+<hr>
+<div id="graphviz-21"></div>
+
+<hr>
+<div id="graphviz-22"></div>
+
+<hr>
+<div id="graphviz-23"></div>
+
+<hr>
+<div id="graphviz-24"></div>
+
+<hr>
+<div id="graphviz-25"></div>
+
+<hr>
+<h2 id="Similar-question"><a href="#Similar-question" class="headerlink" title="Similar question"></a>Similar question</h2><ul>
+<li>Combinations</li>
+<li>Permutation</li>
+<li>Subsets</li>
+<li>N-Queens I</li>
+<li>N-Queens II</li>
+</ul>
+<hr>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">letterCombinations</span><span class="params">(self, digits: str)</span> -&gt; List[str]:</span></span><br><span class="line">        num_dict = &#123;</span><br><span class="line">            <span class="string">"2"</span>: <span class="string">"abc"</span>,</span><br><span class="line">            <span class="string">"3"</span>: <span class="string">"def"</span>,</span><br><span class="line">            <span class="string">"4"</span>: <span class="string">"ghi"</span>,</span><br><span class="line">            <span class="string">"5"</span>: <span class="string">"jkl"</span>,</span><br><span class="line">            <span class="string">"6"</span>: <span class="string">"mno"</span>,</span><br><span class="line">            <span class="string">"7"</span>: <span class="string">"pqrs"</span>,</span><br><span class="line">            <span class="string">"8"</span>: <span class="string">"tuv"</span>,</span><br><span class="line">            <span class="string">"9"</span>: <span class="string">"wxyz"</span></span><br><span class="line">        &#125;</span><br><span class="line">        combinations = []</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> digits:</span><br><span class="line">            <span class="keyword">return</span> combinations</span><br><span class="line">        self.backtracking(combinations, [], digits, num_dict)</span><br><span class="line">        <span class="keyword">return</span> combinations</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backtracking</span><span class="params">(self, combinations, candidate, digits, num_dict)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> len(candidate) == len(digits):</span><br><span class="line">            combinations.append(<span class="string">""</span>.join(candidate))</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        </span><br><span class="line">        current_digit = digits[len(candidate)]</span><br><span class="line">        alphas = num_dict[current_digit]</span><br><span class="line">        <span class="keyword">for</span> alpha <span class="keyword">in</span> alphas:</span><br><span class="line">            candidate.append(alpha)</span><br><span class="line">            self.backtracking(combinations, candidate.copy(), digits,  num_dict)</span><br><span class="line">            candidate.pop()</span><br></pre></td></tr></table></figure>
+<p><script src="https://unpkg.com/viz.js@2.1.2/viz.js"></script><script src="https://unpkg.com/viz.js@2.1.2/full.render.js"></script><textarea id="graphviz-0-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    } 
+    "null" [shape=oval, style=filled, fillcolor="#72a8ff"]
+
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-0-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-0").append(element)  });</script><textarea id="graphviz-1-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->a 
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    } 
+    {
+        rank=same;
+        rank2->a [style=invis];
+        rankdir=LR;
+    }
+    "a" [shape=oval, style=filled, fillcolor="#72a8ff"]
+
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-1-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-1").append(element)  });</script><textarea id="graphviz-2-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->a
+        a->ad
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    } 
+    {
+        rank=same;
+        rank2->a [style=invis];
+        rankdir=LR;
+    }    
+    "ad" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-2-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-2").append(element)  });</script><textarea id="graphviz-3-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->a
+        a->ad
+        ad->a
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    } 
+    {
+        rank=same;
+        rank2->a [style=invis];
+        rankdir=LR;
+    }                
+    "a" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-3-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-3").append(element)  });</script><textarea id="graphviz-4-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->a
+        a->ae
+    }
+    {
+        rank=same;
+        rank2->a [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae [style=invis];
+        rankdir=LR;
+    }   
+    "ae" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-4-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-4").append(element)  });</script><textarea id="graphviz-5-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->a
+        a->ae
+        ae->a
+    }
+    {
+        rank=same;
+        rank2->a [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae [style=invis];
+        rankdir=LR;
+    }  
+    "a" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-5-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-5").append(element)  });</script><textarea id="graphviz-6-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->a
+        a->af
+    }
+    {
+        rank=same;
+        rank2->a [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af [style=invis];
+        rankdir=LR;
+    }  
+    "af" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-6-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-6").append(element)  });</script><textarea id="graphviz-7-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->a
+        a->af
+        af->a
+    }
+    {
+        rank=same;
+        rank2->a [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af [style=invis];
+        rankdir=LR;
+    }  
+    "a" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-7-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-7").append(element)  });</script><textarea id="graphviz-8-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        a->af
+        af->a
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->a
+        a->null
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af [style=invis];
+        rankdir=LR;
+    }  
+    "null" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-8-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-8").append(element)  });</script><textarea id="graphviz-9-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->b
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af [style=invis];
+        rankdir=LR;
+    }   
+    "b" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-9-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-9").append(element)  });</script><textarea id="graphviz-10-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->b
+        b->bd
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd [style=invis];
+        rankdir=LR;
+    } 
+    "bd" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-10-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-10").append(element)  });</script><textarea id="graphviz-11-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->b
+        b->bd
+        bd->b
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd [style=invis];
+        rankdir=LR;
+    } 
+    "b" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-11-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-11").append(element)  });</script><textarea id="graphviz-12-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->b
+        b->be
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be [style=invis];
+        rankdir=LR;
+    } 
+    "be" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-12-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-12").append(element)  });</script><textarea id="graphviz-13-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->b
+        b->be
+        be->b
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be [style=invis];
+        rankdir=LR;
+    } 
+    "b" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-13-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-13").append(element)  });</script><textarea id="graphviz-14-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->b
+        b->bf
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf [style=invis];
+        rankdir=LR;
+    } 
+    "bf" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-14-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-14").append(element)  });</script><textarea id="graphviz-15-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->b
+        b->bf
+        bf->b
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf [style=invis];
+        rankdir=LR;
+    } 
+    "b" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-15-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-15").append(element)  });</script><textarea id="graphviz-16-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+        b->bf
+        bf->b
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->b
+        b->null
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf [style=invis];
+        rankdir=LR;
+    } 
+    "null" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-16-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-16").append(element)  });</script><textarea id="graphviz-17-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+        b->bf
+        bf->b
+        null->b
+        b->null
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->c
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b->c [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf [style=invis];
+        rankdir=LR;
+    } 
+    "c" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-17-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-17").append(element)  });</script><textarea id="graphviz-18-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+        b->bf
+        bf->b
+        null->b
+        b->null
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->c
+        c->cd
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b->c [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf->cd [style=invis];
+        rankdir=LR;
+    } 
+    "cd" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-18-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-18").append(element)  });</script><textarea id="graphviz-19-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+        b->bf
+        bf->b
+        null->b
+        b->null
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->c
+        c->cd
+        cd->c
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b->c [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf->cd [style=invis];
+        rankdir=LR;
+    } 
+    "c" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-19-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-19").append(element)  });</script><textarea id="graphviz-20-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+        b->bf
+        bf->b
+        null->b
+        b->null
+        c->cd
+        cd->c
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->c
+        c->ce
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b->c [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf->cd->ce [style=invis];
+        rankdir=LR;
+    }           
+    "ce" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-20-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-20").append(element)  });</script><textarea id="graphviz-21-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+        b->bf
+        bf->b
+        null->b
+        b->null
+        c->cd
+        cd->c
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->c
+        c->ce
+        ce->c
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b->c [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf->cd->ce [style=invis];
+        rankdir=LR;
+    }            
+    "c" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-21-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-21").append(element)  });</script><textarea id="graphviz-22-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+        b->bf
+        bf->b
+        null->b
+        b->null
+        c->cd
+        cd->c
+        c->ce
+        ce->c
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->c
+        c->cf
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b->c [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf->cd->ce [style=invis];
+        rankdir=LR;
+    }          
+    "cf" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-22-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-22").append(element)  });</script><textarea id="graphviz-23-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+        b->bf
+        bf->b
+        null->b
+        b->null
+        c->cd
+        cd->c
+        c->ce
+        ce->c
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->c
+        c->cf
+        cf->c
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b->c [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf->cd->ce [style=invis];
+        rankdir=LR;
+    }       
+    "c" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-23-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-23").append(element)  });</script><textarea id="graphviz-24-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+        b->bf
+        bf->b
+        null->b
+        b->null
+        c->cd
+        cd->c
+        c->ce
+        ce->c
+        c->cf
+        cf->c
+    }
+    subgraph current {
+        edge [color=Blue]
+        null->c
+        c->null
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b->c [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf->cd->ce [style=invis];
+        rankdir=LR;
+    }          
+    "c" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-24-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-24").append(element)  });</script><textarea id="graphviz-25-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+        a->ad
+        ad->a
+        a->ae
+        ae->a
+        null->a
+        a->af
+        af->a
+        a->null
+        b->bd
+        bd->b
+        b->be
+        be->b
+        b->bf
+        bf->b
+        null->b
+        b->null
+        c->cd
+        cd->c
+        c->ce
+        ce->c
+        c->cf
+        cf->c
+        null->c
+        c->null
+    }
+    subgraph current {
+        edge [color=Blue]
+    }
+    {
+        rank=same;
+        rank1->null [style=invis];
+        rankdir=LR;
+    }  
+    {
+        rank=same;
+        rank2->a->b->c [style=invis];
+        rankdir=LR;
+    }      
+    {
+        rank=same;
+        rank3->ad->ae->af->bd->be->bf->cd->ce [style=invis];
+        rankdir=LR;
+    }              
+    "null" [shape=oval, style=filled, fillcolor="#72a8ff"]
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-25-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-25").append(element)  });</script></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/02/26/Permutation-Sequence/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -344,12 +1648,24 @@
                 
               
 
-              <time title="Created: 2019-02-26 00:33:42 / Modified: 06:12:11" itemprop="dateCreated datePublished" datetime="2019-02-26T00:33:42+00:00">2019-02-26</time>
+              <time title="Created: 2019-02-26 00:33:42" itemprop="dateCreated datePublished" datetime="2019-02-26T00:33:42+00:00">2019-02-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-10 17:43:37" itemprop="dateModified" datetime="2019-03-10T17:43:37+00:00">2019-03-10</time>
               
             
           </span>
@@ -574,7 +1890,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-26 06:12:11" itemprop="dateModified" datetime="2019-02-26T06:12:11+00:00">2019-02-26</time>
+                <time title="Modified: 2019-03-10 17:43:37" itemprop="dateModified" datetime="2019-03-10T17:43:37+00:00">2019-03-10</time>
               
             
           </span>
@@ -788,7 +2104,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-26 06:12:11" itemprop="dateModified" datetime="2019-02-26T06:12:11+00:00">2019-02-26</time>
+                <time title="Modified: 2019-03-10 17:43:37" itemprop="dateModified" datetime="2019-03-10T17:43:37+00:00">2019-03-10</time>
               
             
           </span>
@@ -958,7 +2274,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-26 06:12:11" itemprop="dateModified" datetime="2019-02-26T06:12:11+00:00">2019-02-26</time>
+                <time title="Modified: 2019-03-10 17:43:37" itemprop="dateModified" datetime="2019-03-10T17:43:37+00:00">2019-03-10</time>
               
             
           </span>
@@ -1020,7 +2336,7 @@
 <p>We just need to find the index of minimum of nums, and we could know the number of rotation is equal to it!</p>
 <p>Verify it!</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[4,5,6,7,0,1,2]</span><br><span class="line"> 0 1 2 3 4 5 6</span><br><span class="line">         ^</span><br><span class="line"></span><br><span class="line">[6,7,0,1]</span><br><span class="line"> 0 1 2 3</span><br><span class="line">     ^</span><br></pre></td></tr></table></figure>
-<p><a href="https://hackmd.io/p/HJQTi-kEE#/" target="_blank" rel="noopener">How?</a></p>
+<p>How? Please reference below link:<br><a href="/2019/01/31/Find-Minimum-in-Rotated-Sorted-Array/" title="Find-Minimum-in-Rotated-Sorted-Array">Find-Minimum-in-Rotated-Sorted-Array</a></p>
 <hr>
 <h3 id="Wrap-up"><a href="#Wrap-up" class="headerlink" title="Wrap up"></a>Wrap up</h3><p>The algorithm are …</p>
 <ol>
@@ -1149,7 +2465,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-26 06:12:11" itemprop="dateModified" datetime="2019-02-26T06:12:11+00:00">2019-02-26</time>
+                <time title="Modified: 2019-03-10 17:43:37" itemprop="dateModified" datetime="2019-03-10T17:43:37+00:00">2019-03-10</time>
               
             
           </span>
@@ -1322,7 +2638,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-26 06:12:11" itemprop="dateModified" datetime="2019-02-26T06:12:11+00:00">2019-02-26</time>
+                <time title="Modified: 2019-03-10 17:43:37" itemprop="dateModified" datetime="2019-03-10T17:43:37+00:00">2019-03-10</time>
               
             
           </span>
@@ -1455,7 +2771,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1662,6 +2978,8 @@
 
   
   
+    
+      
     
       
     
