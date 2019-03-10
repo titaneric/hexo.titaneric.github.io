@@ -23,6 +23,7 @@ branches:
 
 before_install:
 - npm install -g hexo-cli
+- git submodule update --init --remote --recursive
 
 install:
 - npm install
