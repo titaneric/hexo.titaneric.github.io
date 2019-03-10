@@ -107,6 +107,7 @@ Verify it!
      ^
 ```
 
+How? Please reference below link:
 {% post_link Find-Minimum-in-Rotated-Sorted-Array %}
 
 ---
