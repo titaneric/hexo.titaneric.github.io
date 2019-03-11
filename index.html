@@ -325,6 +325,414 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/03/12/Binary-Tree-Paths/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eric Huang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Playground">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/12/Binary-Tree-Paths/" class="post-title-link" itemprop="url">Binary_Tree_Paths</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-12 00:54:14" itemprop="dateCreated datePublished" datetime="2019-03-12T00:54:14+00:00">2019-03-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-11 17:06:06" itemprop="dateModified" datetime="2019-03-11T17:06:06+00:00">2019-03-11</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Binary-Tree-Paths-257"><a href="#Binary-Tree-Paths-257" class="headerlink" title="Binary Tree Paths (#257)"></a><a href="https://leetcode.com/problems/binary-tree-paths/" target="_blank" rel="noopener">Binary Tree Paths (#257)</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Given a binary tree, return all root-to-leaf paths.</p>
+<p>Note: A leaf is a node with no children.</p>
+<hr>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line"></span><br><span class="line">   1</span><br><span class="line"> /   \</span><br><span class="line">2     3</span><br><span class="line"> \</span><br><span class="line">  5</span><br><span class="line"></span><br><span class="line">Output: [&quot;1-&gt;2-&gt;5&quot;, &quot;1-&gt;3&quot;]</span><br><span class="line"></span><br><span class="line">Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><p>Use the backtracking, again.</p>
+<ol>
+<li>If node is None, return.</li>
+<li>Check the incoming node, if it is leaf, then build the path.</li>
+<li>Otherwise, append the <strong>val</strong> to list, and do the recursive call with <strong>node.left</strong> and <strong>node.right</strong>.</li>
+<li>Then, pop the last element of list, return to last callee.</li>
+</ol>
+<hr>
+<h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line"></span><br><span class="line">   1</span><br><span class="line"> /   \</span><br><span class="line">2     3</span><br><span class="line"> \</span><br><span class="line">  5</span><br></pre></td></tr></table></figure>
+<hr>
+<div id="graphviz-0"></div>
+
+<p>Append 1 to path, recursive call its left node.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path = [<span class="number">1</span>]</span><br><span class="line">paths = []</span><br></pre></td></tr></table></figure>
+<hr>
+<div id="graphviz-1"></div>
+
+<p>Append 2 to path, recursive call its left node.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">paths = []</span><br></pre></td></tr></table></figure>
+<hr>
+<div id="graphviz-2"></div>
+
+<p>Left node is leaf, return to parent.<br>Recursive call its right node.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">paths = []</span><br></pre></td></tr></table></figure>
+<hr>
+<div id="graphviz-3"></div>
+
+<p>5 is leaf, store the path to paths and pop the last element of path.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">paths = [[<span class="string">"1-&gt;2-&gt;5"</span>]]</span><br></pre></td></tr></table></figure>
+<hr>
+<div id="graphviz-4"></div>
+
+<p>Return to 2, pop the last element of path.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path = [<span class="number">1</span>]</span><br><span class="line">paths = [[<span class="string">"1-&gt;2-&gt;5"</span>]]</span><br></pre></td></tr></table></figure>
+<hr>
+<div id="graphviz-5"></div>
+
+<p>Return to 1, recursive call its right node.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path = [<span class="number">1</span>]</span><br><span class="line">paths = [[<span class="string">"1-&gt;2-&gt;5"</span>]]</span><br></pre></td></tr></table></figure>
+<hr>
+<div id="graphviz-6"></div>
+
+<p>3 is leaf node, store the path in paths and pop the last element of path.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path = [<span class="number">1</span>]</span><br><span class="line">paths = [[<span class="string">"1-&gt;2-&gt;5"</span>], [<span class="string">"1-&gt;3"</span>]]</span><br></pre></td></tr></table></figure>
+<hr>
+<div id="graphviz-7"></div>
+
+<p>Return to 1, pop the last element of path.<br>Finished.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">path = []</span><br><span class="line">paths = [[<span class="string">"1-&gt;2-&gt;5"</span>], [<span class="string">"1-&gt;3"</span>]]</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">binaryTreePaths</span><span class="params">(self, root)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type root: TreeNode</span></span><br><span class="line"><span class="string">        :rtype: List[str]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        paths = []</span><br><span class="line">        self.backtracking(paths, [], root)</span><br><span class="line">        <span class="keyword">return</span> paths</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backtracking</span><span class="params">(self, paths, path, node)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> node <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        path.append(str(node.val))</span><br><span class="line">        <span class="keyword">if</span> self.isLeaf(node):</span><br><span class="line">            paths.append(<span class="string">"-&gt;"</span>.join(path))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.backtracking(paths, path, node.left)</span><br><span class="line">            self.backtracking(paths, path, node.right)</span><br><span class="line">        path.pop()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isLeaf</span><span class="params">(self, node)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> node.left <span class="keyword">is</span> <span class="keyword">None</span> <span class="keyword">and</span> node.right <span class="keyword">is</span> <span class="keyword">None</span></span><br></pre></td></tr></table></figure>
+<p><script src="https://unpkg.com/viz.js@2.1.2/viz.js"></script><script src="https://unpkg.com/viz.js@2.1.2/full.render.js"></script><textarea id="graphviz-0-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+    }
+    {
+        rank=same;
+        rank1->1 [style=invis];
+        rankdir=LR;
+    } 
+    "1" [shape=oval, style=filled, fillcolor="#72a8ff", pos="0,0!"]
+
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-0-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-0").append(element)  });</script><textarea id="graphviz-1-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+        1->2
+    }
+    {
+        rank=same;
+        rank1->1 [style=invis];
+        rankdir=LR;
+    } 
+    {
+        rank=same;
+        rank2->2 [style=invis];
+        rankdir=LR;
+    } 
+    "2" [shape=oval, style=filled, fillcolor="#72a8ff", pos="0,0!"]
+
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-1-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-1").append(element)  });</script><textarea id="graphviz-2-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+        1->2
+    }
+    {
+        rank=same;
+        rank1->1 [style=invis];
+        rankdir=LR;
+    } 
+    {
+        rank=same;
+        rank2->2 [style=invis];
+        rankdir=LR;
+    } 
+
+    "2" [shape=oval, style=filled, fillcolor="#72a8ff", pos="0,0!"]
+
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-2-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-2").append(element)  });</script><textarea id="graphviz-3-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+        1->2
+        2->5
+    }
+    {
+        rank=same;
+        rank1->1 [style=invis];
+        rankdir=LR;
+    } 
+    {
+        rank=same;
+        rank2->2 [style=invis];
+        rankdir=LR;
+    } 
+    {
+        rank=same;
+        rank3->5 [style=invis];
+        rankdir=LR;
+    }
+    "5" [shape=oval, style=filled, fillcolor="#72a8ff", pos="0,0!"]
+
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-3-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-3").append(element)  });</script><textarea id="graphviz-4-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+        1->2
+    }
+    {
+        rank=same;
+        rank1->1 [style=invis];
+        rankdir=LR;
+    } 
+    {
+        rank=same;
+        rank2->2 [style=invis];
+        rankdir=LR;
+    } 
+    "2" [shape=oval, style=filled, fillcolor="#72a8ff", pos="0,0!"]
+
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-4-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-4").append(element)  });</script><textarea id="graphviz-5-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+        1
+    }
+    {
+        rank=same;
+        rank1->1 [style=invis];
+        rankdir=LR;
+    }
+    "1" [shape=oval, style=filled, fillcolor="#72a8ff", pos="0,0!"]
+
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-5-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-5").append(element)  });</script><textarea id="graphviz-6-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+        1->3
+    }
+    {
+        rank=same;
+        rank1->1 [style=invis];
+        rankdir=LR;
+    } 
+    {
+        rank=same;
+        rank2->3 [style=invis];
+        rankdir=LR;
+    } 
+    "3" [shape=oval, style=filled, fillcolor="#72a8ff", pos="0,0!"]
+
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-6-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-6").append(element)  });</script><textarea id="graphviz-7-code" style="display: none">digraph hierarchy {
+    node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
+    nodesep=1.0 // increases the separation between nodes
+    rank1 [style=invisible]
+    rank2 [style=invisible]
+    rank3 [style=invisible]
+    rank1 -> rank2 -> rank3 [color=white]
+    subgraph return {
+        edge [color=Gray, style=dashed] //All the lines look like this
+    }
+    subgraph current {
+        edge [color=Blue]
+    }
+    {
+        rank=same;
+        rank1->1 [style=invis];
+        rankdir=LR;
+    }
+    "1" [shape=oval, style=filled, fillcolor="#72a8ff", pos="0,0!"]
+
+}</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-7-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-7").append(element)  });</script></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/03/11/Letter-Combinations-of-a-Phone-Number/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -370,24 +778,12 @@
                 
               
 
-              <time title="Created: 2019-03-11 01:20:49" itemprop="dateCreated datePublished" datetime="2019-03-11T01:20:49+00:00">2019-03-11</time>
+              <time title="Created: 2019-03-11 01:20:49 / Modified: 17:06:06" itemprop="dateCreated datePublished" datetime="2019-03-11T01:20:49+00:00">2019-03-11</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-10 18:18:11" itemprop="dateModified" datetime="2019-03-10T18:18:11+00:00">2019-03-10</time>
               
             
           </span>
@@ -1691,7 +2087,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-10 18:18:11" itemprop="dateModified" datetime="2019-03-10T18:18:11+00:00">2019-03-10</time>
+                <time title="Modified: 2019-03-11 17:06:06" itemprop="dateModified" datetime="2019-03-11T17:06:06+00:00">2019-03-11</time>
               
             
           </span>
@@ -1916,7 +2312,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-10 18:18:11" itemprop="dateModified" datetime="2019-03-10T18:18:11+00:00">2019-03-10</time>
+                <time title="Modified: 2019-03-11 17:06:06" itemprop="dateModified" datetime="2019-03-11T17:06:06+00:00">2019-03-11</time>
               
             
           </span>
@@ -2130,7 +2526,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-10 18:18:11" itemprop="dateModified" datetime="2019-03-10T18:18:11+00:00">2019-03-10</time>
+                <time title="Modified: 2019-03-11 17:06:06" itemprop="dateModified" datetime="2019-03-11T17:06:06+00:00">2019-03-11</time>
               
             
           </span>
@@ -2300,7 +2696,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-10 18:18:11" itemprop="dateModified" datetime="2019-03-10T18:18:11+00:00">2019-03-10</time>
+                <time title="Modified: 2019-03-11 17:06:06" itemprop="dateModified" datetime="2019-03-11T17:06:06+00:00">2019-03-11</time>
               
             
           </span>
@@ -2491,7 +2887,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-10 18:18:11" itemprop="dateModified" datetime="2019-03-10T18:18:11+00:00">2019-03-10</time>
+                <time title="Modified: 2019-03-11 17:06:06" itemprop="dateModified" datetime="2019-03-11T17:06:06+00:00">2019-03-11</time>
               
             
           </span>
@@ -2664,7 +3060,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-10 18:18:11" itemprop="dateModified" datetime="2019-03-10T18:18:11+00:00">2019-03-10</time>
+                <time title="Modified: 2019-03-11 17:06:06" itemprop="dateModified" datetime="2019-03-11T17:06:06+00:00">2019-03-11</time>
               
             
           </span>
@@ -2797,7 +3193,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -3004,6 +3400,8 @@
 
   
   
+    
+      
     
       
     
