@@ -98,25 +98,25 @@
 
 
 
-  <meta name="description" content="Permutation Sequence (#60)DescriptionThe set [1,2,3,…,n] contains a total of n! unique permutations. By listing and labeling all of the permutations in order, we get the following sequence for n = 3:">
+  <meta name="description" content="Permutations (#46)DescriptionGiven a collection of distinct integers, return all possible permutations.  Example12345678910Input: [1,2,3]Output:[  [1,2,3],  [1,3,2],  [2,1,3],  [2,3,1],  [3,1,2],  [3,">
 <meta name="keywords" content="problem,python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Permutation-Sequence">
-<meta property="og:url" content="http://titaneric.github.io/2019/02/26/Permutation-Sequence/index.html">
+<meta property="og:title" content="Permutations">
+<meta property="og:url" content="http://titaneric.github.io/2019/03/12/Permutations/index.html">
 <meta property="og:site_name" content="Playground">
-<meta property="og:description" content="Permutation Sequence (#60)DescriptionThe set [1,2,3,…,n] contains a total of n! unique permutations. By listing and labeling all of the permutations in order, we get the following sequence for n = 3:">
+<meta property="og:description" content="Permutations (#46)DescriptionGiven a collection of distinct integers, return all possible permutations.  Example12345678910Input: [1,2,3]Output:[  [1,2,3],  [1,3,2],  [2,1,3],  [2,3,1],  [3,1,2],  [3,">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-03-11T17:53:28.855Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Permutation-Sequence">
-<meta name="twitter:description" content="Permutation Sequence (#60)DescriptionThe set [1,2,3,…,n] contains a total of n! unique permutations. By listing and labeling all of the permutations in order, we get the following sequence for n = 3:">
+<meta name="twitter:title" content="Permutations">
+<meta name="twitter:description" content="Permutations (#46)DescriptionGiven a collection of distinct integers, return all possible permutations.  Example12345678910Input: [1,2,3]Output:[  [1,2,3],  [1,3,2],  [2,1,3],  [2,3,1],  [3,1,2],  [3,">
 
 
 
 
 
 
-  <link rel="canonical" href="http://titaneric.github.io/2019/02/26/Permutation-Sequence/">
+  <link rel="canonical" href="http://titaneric.github.io/2019/03/12/Permutations/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>Permutation-Sequence | Playground</title>
+  <title>Permutations | Playground</title>
   
 
 
@@ -329,7 +329,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/02/26/Permutation-Sequence/">
+    <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/03/12/Permutations/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Eric Huang">
@@ -346,7 +346,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Permutation-Sequence
+          <h1 class="post-title" itemprop="name headline">Permutations
 
               
             
@@ -372,7 +372,7 @@
                 
               
 
-              <time title="Created: 2019-02-26 00:33:42" itemprop="dateCreated datePublished" datetime="2019-02-26T00:33:42+00:00">2019-02-26</time>
+              <time title="Created: 2019-03-12 01:46:30" itemprop="dateCreated datePublished" datetime="2019-03-12T01:46:30+00:00">2019-03-12</time>
             
 
             
@@ -422,78 +422,34 @@
       
 
       
-        <h1 id="Permutation-Sequence-60"><a href="#Permutation-Sequence-60" class="headerlink" title="Permutation Sequence (#60)"></a><a href="https://leetcode.com/problems/permutation-sequence/" target="_blank" rel="noopener">Permutation Sequence (#60)</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>The set [1,2,3,…,n] contains a total of n! unique permutations.</p>
-<p>By listing and labeling all of the permutations in order, we get the following sequence for n = 3:</p>
-<ol>
-<li>“123”</li>
-<li>“132”</li>
-<li>“213”</li>
-<li>“231”</li>
-<li>“312”</li>
-<li>“321”</li>
+        <h2 id="Permutations-46"><a href="#Permutations-46" class="headerlink" title="Permutations (#46)"></a><a href="https://leetcode.com/problems/permutations/" target="_blank" rel="noopener">Permutations (#46)</a></h2><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Given a collection of <strong>distinct</strong> integers, return all possible permutations.</p>
+<hr>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,2,3]</span><br><span class="line">Output:</span><br><span class="line">[</span><br><span class="line">  [1,2,3],</span><br><span class="line">  [1,3,2],</span><br><span class="line">  [2,1,3],</span><br><span class="line">  [2,3,1],</span><br><span class="line">  [3,1,2],</span><br><span class="line">  [3,2,1]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h2><ol>
+<li>Recursive function (Backtracking).</li>
+<li>Use <strong>Permutation Sequence</strong>.</li>
+<li>Use <strong>Next Permutation</strong>.</li>
 </ol>
-<p>Given n and k, return the kth permutation sequence.</p>
 <hr>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>Example 1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 3, k = 3</span><br><span class="line">Output: &quot;213&quot;</span><br></pre></td></tr></table></figure></p>
-<p>Example 2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 4, k = 9</span><br><span class="line">Output: &quot;2314&quot;</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution)"></a><a href="https://leetcode.com/problems/permutation-sequence/discuss/22507/%22Explain-like-I&#39;m-five%22-Java-Solution-in-O(n" target="_blank" rel="noopener">Solution</a>)</h2><h3 id="Observation"><a href="#Observation" class="headerlink" title="Observation"></a>Observation</h3><p>Given n = 4 and k = 5.</p>
-<p>Emumerate part of permutations:</p>
-<ol>
-<li>“1234”</li>
-<li>“1243”</li>
-<li>“1324”</li>
-<li>“1342”</li>
-<li>“1423”</li>
-<li>“1432”</li>
-<li>…</li>
+<h3 id="Recursive-Backtracking"><a href="#Recursive-Backtracking" class="headerlink" title="Recursive (Backtracking)"></a>Recursive (Backtracking)</h3><ol>
+<li>If the incoming <code>permutation</code> length is equal to <code>Input</code> length, store it.</li>
+<li>Otherwise, for every element  of <code>Input</code>:<br>2.1 If element is visted, continue<br>2.2 Otherwise, visit it and add to <code>permutation</code> and recursive call with updated <code>permutation</code>.<br>2.3 Pop the last element of <code>permutation</code> and un-visit the element.</li>
 </ol>
-<p>Should return “1423”</p>
 <hr>
-<p>All permutations are consist of</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 + permutation([2, 3, 4]), size = 3!</span><br><span class="line">2 + permutation([1, 3, 4]), size = 3!</span><br><span class="line">3 + permutation([1, 2, 4]), size = 3!</span><br><span class="line">4 + permutation([1, 2, 3]), size = 3!</span><br></pre></td></tr></table></figure>
-<p>5 is located at 1st group!<br>So the first number is <strong>1</strong>.</p>
-<hr>
-<p>How to determine the group index?<br>By <strong>division</strong>!</p>
-<p>For convenient, convert k to zero base.<br>E.g., 5 - 1 = 4.</p>
-<p><strong>Q</strong>: There are $n$ groups, and each group is $(n - 1)!$ size, what’s the group index of $k$?</p>
-<p><strong>A</strong>: It’s $k / (n - 1)!$</p>
-<p>E.g.<br>$4 / (4 - 1)! = 0$</p>
-<hr>
-<div style="color: #8a6d3b"><br>After determining the group number, the number is in <strong>ordered candidates</strong> at group index.<br></div>
-
-<p>E.g.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">candidates = [1, 2, 3, 4]</span><br><span class="line">              0  1  2  3</span><br><span class="line"></span><br><span class="line">group index = 0</span><br></pre></td></tr></table></figure></p>
-<p>Get the first number 1.</p>
-<hr>
-<p>How to determine rest of numbers?<br>Let’s look at new permutations.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2 + permutation([3, 4]), size = 2!</span><br><span class="line">3 + permutation([1, 4]), size = 2!</span><br><span class="line">4 + permutation([2, 3]), size = 2!</span><br></pre></td></tr></table></figure>
-<p>New k become $4 - 0 \times (4 - 1)! = 4$.<br>That is also equal to $4  \, \% \, (4 - 1)! = 4$.</p>
-<div style="color: #8a6d3b"><br>- $\text{index} = \text{index} \, \% \, \lvert\text{candidates}\rvert!$<br>- $\text{candidates} = \text{candidates} \setminus {\text{selected number}}$<br></div>
-
-<hr>
-<p>Continue…<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">k = 4</span><br><span class="line">candidates = [2, 3, 4]</span><br></pre></td></tr></table></figure></p>
-<p>Group index = $4 / (3 - 1)! = 2$<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">candidates = [2, 3, 4]</span><br><span class="line">              0  1  2</span><br><span class="line"></span><br><span class="line">group index = 2</span><br></pre></td></tr></table></figure></p>
-<p>Select 4</p>
-<p>new candidates = <code>[2, 3]</code><br>new k = $4 \% (3 - 1)! = 0$</p>
-<hr>
-<p>Continue…<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">k = 0</span><br><span class="line">candidates = [2, 3]</span><br></pre></td></tr></table></figure></p>
-<p>Group index = $0 / (2 - 1)! = 0$<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">candidates = [2, 3]</span><br><span class="line">              0  1</span><br><span class="line"></span><br><span class="line">group index = 0</span><br></pre></td></tr></table></figure></p>
-<p>Select 2</p>
-<p>new candidates = <code>[3]</code><br>new k = $0 \% (2 - 1)! = 0$</p>
-<hr>
-<p>Finally…<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">k = 0</span><br><span class="line">candidates = [3]</span><br></pre></td></tr></table></figure></p>
-<p>Group index = $0 / (1 - 1)! = 0$<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">candidates = [3]</span><br><span class="line">              0</span><br><span class="line"></span><br><span class="line">group index = 0</span><br></pre></td></tr></table></figure></p>
-<p>Select 3</p>
-<hr>
-<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><ol>
-<li>Find out which group k is located by division</li>
-<li>Use the quotient to index the quotient</li>
-<li>Update candidates, k as remainder</li>
-<li>When candidates length is not zero, goto 1</li>
+<h3 id="Use-Permutation-Sequence"><a href="#Use-Permutation-Sequence" class="headerlink" title="Use Permutation Sequence."></a>Use Permutation Sequence.</h3><ol>
+<li>Sort the given <code>Input</code>.</li>
+<li>for i in 1..$n!$:<br>2.1 Use the <a href="/2019/02/26/Permutation-Sequence/" title="Permutation-Sequence">Permutation-Sequence</a> with index <code>i</code> to generate the permutation.<br>2.2 Store it.</li>
 </ol>
-<p>Time Complexity: $O(n)$<br>Space Complexity: $O(n)$</p>
 <hr>
-<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getPermutation</span><span class="params">(self, n, k)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type n: int</span></span><br><span class="line"><span class="string">        :type k: int</span></span><br><span class="line"><span class="string">        :rtype: str</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        factorial = [<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">            factorial.append(factorial[<span class="number">-1</span>] * i)</span><br><span class="line"></span><br><span class="line">        nums = list(range(<span class="number">1</span>, n + <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">        k -= <span class="number">1</span></span><br><span class="line">        s = [<span class="string">"0"</span> <span class="keyword">for</span> _ <span class="keyword">in</span> range(n)]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> reversed(range(n)):</span><br><span class="line">            index, k = divmod(k, factorial[i])</span><br><span class="line">            s[n - <span class="number">1</span> - i] = str(nums[index])</span><br><span class="line">            nums.pop(index)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span>.join(s)</span><br></pre></td></tr></table></figure>
+<h3 id="Use-Next-Permutation"><a href="#Use-Next-Permutation" class="headerlink" title="Use Next Permutation."></a>Use Next Permutation.</h3><ol>
+<li>Sort the given <code>Input</code> and put it to <code>seq</code>.</li>
+<li>Store <code>seq</code></li>
+<li>i = 1</li>
+<li>while i is not equal to <code>n!</code>:<br>4.1 Use the <a href="/2019/02/22/Next-Permutation/" title="Next-Permutation">Next-Permutation</a> to generate the next permutation.<br>4.2 Store it.</li>
+</ol>
+<hr>
+<h3 id="Code-Backtracking"><a href="#Code-Backtracking" class="headerlink" title="Code (Backtracking)"></a>Code (Backtracking)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">permute</span><span class="params">(self, nums)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :rtype: List[List[int]]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="comment"># return [list(p) for p in permutations(nums)]</span></span><br><span class="line"></span><br><span class="line">        permute_list = []</span><br><span class="line">        visted = [<span class="keyword">False</span> <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(nums))]</span><br><span class="line">        self.backtracking(permute_list, [], visted, nums)</span><br><span class="line">        <span class="keyword">return</span> permute_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backtracking</span><span class="params">(self, permute_list, permutes, visted, nums)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> len(permutes) == len(nums):</span><br><span class="line">            permute_list.append(permutes.copy())</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(visted)):</span><br><span class="line">            <span class="keyword">if</span> visted[i]:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            visted[i] = <span class="keyword">True</span></span><br><span class="line">            permutes.append(nums[i])</span><br><span class="line">            self.backtracking(permute_list, permutes, visted, nums)</span><br><span class="line">            permutes.pop()</span><br><span class="line">            visted[i] = <span class="keyword">False</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -532,8 +488,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/22/Next-Permutation/" rel="next" title="Next-Permutation">
-                <i class="fa fa-chevron-left"></i> Next-Permutation
+              <a href="/2019/03/12/Binary-Tree-Paths/" rel="next" title="Binary_Tree_Paths">
+                <i class="fa fa-chevron-left"></i> Binary_Tree_Paths
               </a>
             
           </div>
@@ -541,10 +497,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/11/Letter-Combinations-of-a-Phone-Number/" rel="prev" title="Letter_Combinations_of_a_Phone_Number">
-                Letter_Combinations_of_a_Phone_Number <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -673,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Permutation-Sequence-60"><span class="nav-number">1.</span> <span class="nav-text">Permutation Sequence (#60)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">1.1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example"><span class="nav-number">1.2.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution"><span class="nav-number">1.3.</span> <span class="nav-text">Solution)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Observation"><span class="nav-number">1.3.1.</span> <span class="nav-text">Observation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Algorithm"><span class="nav-number">1.3.2.</span> <span class="nav-text">Algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">1.3.3.</span> <span class="nav-text">Code</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Permutations-46"><span class="nav-number">1.</span> <span class="nav-text">Permutations (#46)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number">2.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example"><span class="nav-number">3.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solutions"><span class="nav-number">4.</span> <span class="nav-text">Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Recursive-Backtracking"><span class="nav-number">4.1.</span> <span class="nav-text">Recursive (Backtracking)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-Permutation-Sequence"><span class="nav-number">4.2.</span> <span class="nav-text">Use Permutation Sequence.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-Next-Permutation"><span class="nav-number">4.3.</span> <span class="nav-text">Use Next Permutation.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-Backtracking"><span class="nav-number">4.4.</span> <span class="nav-text">Code (Backtracking)</span></a></li></ol></li></ol></div>
             
 
           </div>
