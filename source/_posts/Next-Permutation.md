@@ -24,6 +24,8 @@ The replacement must be in-place and use only constant extra memory.
 `3, 2 ,1` $\rightarrow$ `1, 2, 3`
 `1, 1, 5` $\rightarrow$ `1, 5, 1`
 
+<!--more-->
+
 ---
 
 ## Solution

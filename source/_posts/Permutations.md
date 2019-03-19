@@ -29,6 +29,8 @@ Output:
 ]
 ```
 
+<!--more-->
+
 ---
 
 ## Solutions

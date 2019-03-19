@@ -17,6 +17,8 @@ Choose v3，filled up domains which need to be validated.
 Example：
  - 127.0.0.1
 
+<!--more-->
+
 ## Code
 
 ### blade or HTML

@@ -1,5 +1,5 @@
 ---
-title: Binary_Tree_Paths
+title: Binary-Tree-Paths
 date: 2019-03-12 00:54:14
 tags:
  - python
@@ -44,6 +44,8 @@ Use the backtracking, again.
 2. Check the incoming node, if it is leaf, then build the path.
 3. Otherwise, append the **val** to list, and do the recursive call with **node.left** and **node.right**.
 4. Then, pop the last element of list, return to last callee.
+
+<!--more-->
 
 ---
 

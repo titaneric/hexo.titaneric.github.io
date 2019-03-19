@@ -1,5 +1,5 @@
 ---
-title: Letter_Combinations_of_a_Phone_Number
+title: Letter-Combinations-of-a-Phone-Number
 date: 2019-03-11 01:20:49
 tags:
  - problem
@@ -56,7 +56,8 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 3. Use the length of combination to access digit, iterate all mapping characters
     3.1 Push the character into combination and goto 1.
     3.2 Pop the last element of combination, and goto 3.
-
+    
+<!--more-->
 ---
 
 ## Run

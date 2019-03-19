@@ -70,6 +70,8 @@ Otherwise, iterate all `candidate` from `begin` to end of `candidates`:
         pop `candidate` from `solution`
 ```
 
+<!--more-->
+
 ---
 
 ### Run

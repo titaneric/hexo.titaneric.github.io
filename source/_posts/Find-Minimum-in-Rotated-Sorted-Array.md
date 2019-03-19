@@ -34,6 +34,8 @@ Output: 0
 
 ---
 
+<!--more-->
+
 ## Solution
 
 ### Solution I ([Reference](https://leetcode.com/articles/find-minimum-in-rotated-sorted-array/))
