@@ -98,19 +98,19 @@
 
 
 
-  <meta name="description" content="recaptcha v3ApplyApply on Admin console  Choose v3，filled up domains which need to be validated. Example：  127.0.0.1  Codeblade or HTML12345&amp;lt;form&amp;gt;    &amp;lt;input type=&quot;text&quot; id=&quot;g-recaptcha-respon">
+  <meta name="description" content="recaptcha v3ApplyApply on Admin console  Choose v3，filled up domains which need to be validated. Example：  127.0.0.1">
 <meta name="keywords" content="web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="recaptcha">
 <meta property="og:url" content="http://titaneric.github.io/2019/01/14/recaptcha/index.html">
 <meta property="og:site_name" content="Playground">
-<meta property="og:description" content="recaptcha v3ApplyApply on Admin console  Choose v3，filled up domains which need to be validated. Example：  127.0.0.1  Codeblade or HTML12345&amp;lt;form&amp;gt;    &amp;lt;input type=&quot;text&quot; id=&quot;g-recaptcha-respon">
+<meta property="og:description" content="recaptcha v3ApplyApply on Admin console  Choose v3，filled up domains which need to be validated. Example：  127.0.0.1">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/oUXeDZM.png">
-<meta property="og:updated_time" content="2019-03-19T04:45:07.559Z">
+<meta property="og:updated_time" content="2019-03-19T04:56:52.231Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="recaptcha">
-<meta name="twitter:description" content="recaptcha v3ApplyApply on Admin console  Choose v3，filled up domains which need to be validated. Example：  127.0.0.1  Codeblade or HTML12345&amp;lt;form&amp;gt;    &amp;lt;input type=&quot;text&quot; id=&quot;g-recaptcha-respon">
+<meta name="twitter:description" content="recaptcha v3ApplyApply on Admin console  Choose v3，filled up domains which need to be validated. Example：  127.0.0.1">
 <meta name="twitter:image" content="https://i.imgur.com/oUXeDZM.png">
 
 
@@ -391,7 +391,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-19 04:45:07" itemprop="dateModified" datetime="2019-03-19T04:45:07+00:00">2019-03-19</time>
+                <time title="Modified: 2019-03-19 04:56:52" itemprop="dateModified" datetime="2019-03-19T04:56:52+00:00">2019-03-19</time>
               
             
           </span>
@@ -431,6 +431,7 @@
 <ul>
 <li>127.0.0.1</li>
 </ul>
+<a id="more"></a>
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><h3 id="blade-or-HTML"><a href="#blade-or-HTML" class="headerlink" title="blade or HTML"></a>blade or HTML</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"g-recaptcha-response"</span> <span class="attr">name</span>=<span class="string">"g-recaptcha-response"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"name"</span> <span class="attr">id</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="blade-or-JS"><a href="#blade-or-JS" class="headerlink" title="blade or JS"></a>blade or JS</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">'https://www.google.com/recaptcha/api.js?render=SITE_KEY'</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  grecaptcha.ready(function() &#123;</span></span><br><span class="line"><span class="undefined">  grecaptcha.execute('SITE_KEY', &#123;action: 'your_action'&#125;)</span></span><br><span class="line"><span class="undefined">    .then(function(token)&#123;</span></span><br><span class="line"><span class="undefined">      document.getElementById("g-recaptcha-response").value = token</span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="php"><a href="#php" class="headerlink" title="php"></a>php</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">recaptchaCheck</span><span class="params">($recaptchaToken, $action)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    $secret_key = config(<span class="string">'app.NOCAPTCHA_SECRET'</span>);</span><br><span class="line">    $client = <span class="keyword">new</span> Client();</span><br><span class="line">    $result = $client-&gt;post(<span class="string">'https://www.google.com/recaptcha/api/siteverify'</span>, [</span><br><span class="line">        <span class="string">'form_params'</span> =&gt; [</span><br><span class="line">            <span class="string">'secret'</span> =&gt; $secret_key,</span><br><span class="line">            <span class="string">'response'</span> =&gt; $recaptchaToken,</span><br><span class="line">        ],</span><br><span class="line">    ]);</span><br><span class="line">    $result = json_decode($result-&gt;getBody(), <span class="keyword">true</span>);</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">isset</span>($result[<span class="string">'success'</span>]) &amp;&amp; $result[<span class="string">'success'</span>]) &amp;&amp;</span><br><span class="line">        (<span class="keyword">isset</span>($result[<span class="string">'score'</span>]) &amp;&amp; $result[<span class="string">'score'</span>] &gt; <span class="number">0.5</span>) &amp;&amp;</span><br><span class="line">        (<span class="keyword">isset</span>($result[<span class="string">'action'</span>]) &amp;&amp; $result[<span class="string">'action'</span>] === $action);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

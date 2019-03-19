@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Playground">
 <meta property="og:description" content="Combination Sum (#39)DescriptionGiven a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-19T04:45:07.559Z">
+<meta property="og:updated_time" content="2019-03-19T04:56:52.231Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Combination-Sum">
 <meta name="twitter:description" content="Combination Sum (#39)DescriptionGiven a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers">
@@ -372,7 +372,7 @@
                 
               
 
-              <time title="Created: 2019-03-19 12:17:12 / Modified: 04:45:07" itemprop="dateCreated datePublished" datetime="2019-03-19T12:17:12+00:00">2019-03-19</time>
+              <time title="Created: 2019-03-19 12:17:12 / Modified: 04:56:52" itemprop="dateCreated datePublished" datetime="2019-03-19T12:17:12+00:00">2019-03-19</time>
             
 
             
@@ -422,6 +422,7 @@
 <h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><p>Again, use the backtracking to solve it.</p>
 <p>Parameters:<br><code>solution set</code>, <code>solution</code>, <code>begin</code>, <code>target</code>, <code>candidates</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">If the incoming `target` is zero, save the `solution` to `solution set` and return.</span><br><span class="line"></span><br><span class="line">Otherwise, iterate all `candidate` from `begin` to end of `candidates`:</span><br><span class="line">    If `candidate` is less or equal than `target`:</span><br><span class="line">        add `candidate` to `solution`</span><br><span class="line">        update `target` to `target` - `candidate`</span><br><span class="line">        update `begin` to index of `candidate`</span><br><span class="line">        backtracking with updated parameter `solution` and `target`</span><br><span class="line">        pop `candidate` from `solution`</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <hr>
 <h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Input: candidates = [2,3,6,7], target = 7</span><br></pre></td></tr></table></figure>
 <hr>

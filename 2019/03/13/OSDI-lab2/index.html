@@ -114,7 +114,7 @@
 <meta property="og:image" content="https://i.imgur.com/ejJFhn5.png">
 <meta property="og:image" content="https://i.imgur.com/KB682J1.png">
 <meta property="og:image" content="https://i.imgur.com/WGZwVkx.png">
-<meta property="og:updated_time" content="2019-03-19T04:45:07.559Z">
+<meta property="og:updated_time" content="2019-03-19T04:56:52.231Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OSDI-lab2">
 <meta name="twitter:description" content="OSDI lab IIObjective Learn how to build a customized BIOS and show some message on system startup. Understand kernel booting flow and boot a ‘hello world’ program. Learn how to use BIOS interrupt call">
@@ -398,7 +398,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-19 04:45:07" itemprop="dateModified" datetime="2019-03-19T04:45:07+00:00">2019-03-19</time>
+                <time title="Modified: 2019-03-19 04:56:52" itemprop="dateModified" datetime="2019-03-19T04:56:52+00:00">2019-03-19</time>
               
             
           </span>
@@ -437,6 +437,7 @@
 <li>Learn how to use BIOS interrupt call to do I/O tasks.</li>
 <li>Learn how to modify linux-0.11 bootsect.s and the build system to create a multiboot kernel image.</li>
 </ul>
+<a id="more"></a>
 <hr>
 <h2 id="Lab2-1-Build-SEABIOS-add-some-message-before-system-startup"><a href="#Lab2-1-Build-SEABIOS-add-some-message-before-system-startup" class="headerlink" title="Lab2.1 - Build SEABIOS, add some message before system startup"></a>Lab2.1 - Build SEABIOS, add some message before system startup</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://git.seabios.org/seabios.git seabios</span><br><span class="line"><span class="built_in">cd</span> seabios/</span><br><span class="line">make menuconfig</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
 <p>Print message in <code>enable_vga_console</code> function in <code>src/bootsplash.c</code>.<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span></span><br><span class="line">enable_vga_console(<span class="keyword">void</span>)</span><br><span class="line">&#123;</span><br><span class="line">    dprintf(<span class="number">1</span>, <span class="string">"Turning on vga text mode console\n"</span>);</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">bregs</span> <span class="title">br</span>;</span> </span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Enable VGA text mode */</span></span><br><span class="line">    <span class="built_in">memset</span>(&amp;br, <span class="number">0</span>, <span class="keyword">sizeof</span>(br));</span><br><span class="line">    br.ax = <span class="number">0x0003</span>;</span><br><span class="line">    call16_int10(&amp;br);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"This is OSDI lab2.\n"</span>);</span><br><span class="line">    <span class="comment">// Write to screen.</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"SeaBIOS (version %s)\n"</span>, VERSION);</span><br><span class="line">    display_uuid();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
