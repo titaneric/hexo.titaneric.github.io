@@ -11,20 +11,29 @@ Major in Data Science
 
 # Skill tree
 
+## Fundamental skills
+
 ```graphviz
 digraph hierarchy {
     node [color=Black,fontname=consolus,shape=oval] //All nodes will this shape and colour
-    "Skills"->"Web"
-    "Skills"->"Data Science"
+    "Fundamental skills"->"Programming language"
+    "Programming language"->"Python 3"
+    "Programming language"->"C++ 11"
+    "Programming language"->"ES6"
+    
+    "Fundamental skills"->"Git"
+    "Git"->"Git flow"
 }
 ```
+
+## Web Development
 
 ```graphviz
 digraph hierarchy {
     node [color=Black,fontname=consolus,shape=oval] //All nodes will this shape and colour
     subgraph Web {
         "Web"->"frontend"
-        "Web"->"backend"
+        "backend"->"Web"[dir=back]
     }
     subgraph frontend {
         "frontend"->"Vue"
@@ -49,29 +58,59 @@ digraph hierarchy {
         "cache"->"redis"
         
         "backend"->"RESTful APIs"
+        
+        "backend"->"crawler"
     }
 }
 ```
+
+## Data Science
 
 ```graphviz
 digraph hierarchy {
     node [color=Black,fontname=consolus,shape=oval] //All nodes will this shape and colour
     subgraph data{
         "Data Science"->"Machine Learning"
-        "Data Science"->"Deep Learning"
+        "Deep Learning"->"Data Science"[dir=back]
         "Data Science"->"Data Preprocessing"
+        "Data Science"->"Math"
+    }
+    subgraph math{
+        "Linear Algebra"->"Math"[dir=back]
+        "Statistics"->"Math"[dir=back]
+        "Math"->"Probability"
+        "Math"->"Convex Optimization"
     }
     subgraph preprocess{
         "Data Preprocessing"->"text"
         "Data Preprocessing"->"audio"
+        "Data Preprocessing"->"image"
     }
     subgraph textPre{
-        "text"->"parse"
-        "parse"->"awk"
-        "parse"->"sed"
+        "text"->"awk"
+        "text"->"numpy"
+        "text"->"pandas"
     }
     subgraph audioPre{
         "audio"->"ffmpeg"
     }
+    subgraph imagePre{
+        "image"->"OpenCV"
+    }
 }
 ```
+
+## Experience
+
+### Course
+
+- OSDI
+- Data Mining
+
+### Project
+
+- [Account System](https://account.cs.nctu.edu.tw/)
+- Room Reservation System
+- Visualization 119 in Taiwan
+- Data visulization
+- EZMusix
