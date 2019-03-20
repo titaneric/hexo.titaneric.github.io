@@ -98,17 +98,17 @@
 
 
 
-  <meta name="description" content="BackgroundGraduate Student at National Chiao Tung University, TaiwanMajor in Data Science Skill treeFundamental skills  Web Development  Data Science  ExperienceCourse OSDI Data Mining  Project Accoun">
+  <meta name="description" content="BackgroundGraduate Student at National Chiao Tung University, TaiwanMajor in Data Science Skill treeFundamental skills  Web Development  Data Science  ExperienceCourse OSDI Data Mining Graph Theory Th">
 <meta property="og:type" content="website">
 <meta property="og:title" content="about">
 <meta property="og:url" content="http://titaneric.github.io/about/index.html">
 <meta property="og:site_name" content="Playground">
-<meta property="og:description" content="BackgroundGraduate Student at National Chiao Tung University, TaiwanMajor in Data Science Skill treeFundamental skills  Web Development  Data Science  ExperienceCourse OSDI Data Mining  Project Accoun">
+<meta property="og:description" content="BackgroundGraduate Student at National Chiao Tung University, TaiwanMajor in Data Science Skill treeFundamental skills  Web Development  Data Science  ExperienceCourse OSDI Data Mining Graph Theory Th">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-20T08:04:35.591Z">
+<meta property="og:updated_time" content="2019-03-20T18:10:55.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="about">
-<meta name="twitter:description" content="BackgroundGraduate Student at National Chiao Tung University, TaiwanMajor in Data Science Skill treeFundamental skills  Web Development  Data Science  ExperienceCourse OSDI Data Mining  Project Accoun">
+<meta name="twitter:description" content="BackgroundGraduate Student at National Chiao Tung University, TaiwanMajor in Data Science Skill treeFundamental skills  Web Development  Data Science  ExperienceCourse OSDI Data Mining Graph Theory Th">
 
 
 
@@ -385,6 +385,8 @@
 <h2 id="Experience"><a href="#Experience" class="headerlink" title="Experience"></a>Experience</h2><h3 id="Course"><a href="#Course" class="headerlink" title="Course"></a>Course</h3><ul>
 <li>OSDI</li>
 <li>Data Mining</li>
+<li>Graph Theory</li>
+<li>Theory of Computation</li>
 </ul>
 <h3 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h3><ul>
 <li><a href="https://account.cs.nctu.edu.tw/" target="_blank" rel="noopener">Account System</a></li>
@@ -393,6 +395,7 @@
 <li>Data visulization</li>
 <li>EZMusix<script src="https://unpkg.com/viz.js@2.1.2/viz.js"></script><script src="https://unpkg.com/viz.js@2.1.2/full.render.js"></script><textarea id="graphviz-0-code" style="display: none">digraph hierarchy {
     node [color=Black,fontname=consolus,shape=oval] //All nodes will this shape and colour
+    edge [splines=curved]
     "Fundamental skills"->"Programming language"
     "Programming language"->"Python 3"
     "Programming language"->"C++ 11"
@@ -400,11 +403,14 @@
     
     "Fundamental skills"->"Git"
     "Git"->"Git flow"
+    
+    "Fundamental skills"->"Basic Linux"
 }</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-0-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-0").append(element)  });</script><textarea id="graphviz-1-code" style="display: none">digraph hierarchy {
     node [color=Black,fontname=consolus,shape=oval] //All nodes will this shape and colour
     subgraph Web {
         "Web"->"frontend"
         "backend"->"Web"[dir=back]
+        "CI/CD"->"Web"[dir=back]
     }
     subgraph frontend {
         "frontend"->"Vue"
@@ -412,25 +418,39 @@
         
         "frontend"->"ES6"
         "ES6"->"airbnb"
+        
+        "frontend"->"CSS"
+        "CSS"->"bootstrap"
+        "CSS"->"ant design"
    }
     subgraph backend {
         "backend"->"framework"
         "framework"->"Laravel"
         "Laravel"->"PSR-2"
+        "Laravel"->"HTTP Test"
+        "Laravel"->"Faker"
+        "Laravel"->"ORM"
+        "Laravel"[dir=back]
+        "Validation"->"Laravel"[dir=back]
         
         "framework"->"Django"
         "Django"->"PEP8"
+        "Django"->"ORM"
         
         "backend"->"database"
-        "database"->"MySQL"
+        "MySQL"->"database"[dir=back]
         "database"->"MongoDB"
         
-        "backend"->"cache"
-        "cache"->"redis"
+        "cache"->"backend"[dir=back]
+        "redis"->"cache"[dir=back]
         
-        "backend"->"RESTful APIs"
+        "RESTful APIs"->"backend"[dir=back]
         
         "backend"->"crawler"
+    }
+    subgraph CI{
+        "Gitlab"->"CI/CD"[dir=back]
+        "Travis"->"CI/CD"[dir=back]
     }
 }</textarea><script>  var viz = new Viz();  var code = document.getElementById("graphviz-1-code").value;  viz.renderSVGElement(code)  .then(function(element) {    document.getElementById("graphviz-1").append(element)  });</script><textarea id="graphviz-2-code" style="display: none">digraph hierarchy {
     node [color=Black,fontname=consolus,shape=oval] //All nodes will this shape and colour
@@ -455,6 +475,7 @@
         "text"->"awk"
         "text"->"numpy"
         "text"->"pandas"
+        "text"->"regex"
     }
     subgraph audioPre{
         "audio"->"ffmpeg"
