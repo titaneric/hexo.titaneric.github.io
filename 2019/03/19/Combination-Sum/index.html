@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Playground">
 <meta property="og:description" content="Combination Sum (#39)DescriptionGiven a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-19T04:56:52.231Z">
+<meta property="og:updated_time" content="2019-03-20T05:05:58.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Combination-Sum">
 <meta name="twitter:description" content="Combination Sum (#39)DescriptionGiven a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers">
@@ -235,6 +235,23 @@
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
 
   </li>
         
@@ -372,12 +389,24 @@
                 
               
 
-              <time title="Created: 2019-03-19 12:17:12 / Modified: 04:56:52" itemprop="dateCreated datePublished" datetime="2019-03-19T12:17:12+00:00">2019-03-19</time>
+              <time title="Created: 2019-03-19 12:17:12" itemprop="dateCreated datePublished" datetime="2019-03-19T12:17:12+00:00">2019-03-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-20 05:05:58" itemprop="dateModified" datetime="2019-03-20T05:05:58+00:00">2019-03-20</time>
               
             
           </span>
@@ -556,18 +585,8 @@
 <p>Have run all of candidate, terminated.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">begin = <span class="number">3</span></span><br><span class="line">target = <span class="number">7</span></span><br><span class="line">solution = []</span><br><span class="line">solution_set = [[<span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>],[<span class="number">7</span>]]</span><br><span class="line">candidate = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">6</span> ,<span class="number">7</span>]</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p><code>`</code>python<br>class Solution:<br>    def combinationSum(self, candidates, target):<br>        “””<br>        :type candidates: List[int]<br>        :type target: int<br>        :rtype: List[List[int]]<br>        “””<br>        combination_list = []<br>        self.back_tracking(combination_list, [], 0, target, candidates)<br>        return combination_list</p>
-<pre><code>def back_tracking(self, combination_list, combines, begin, target, candidates):
-    if target == 0:
-        combination_list.append(combines.copy())
-        return
-    for i in range(begin, len(candidates)):
-        num = candidates[i]
-        if num &lt;= target:
-            combines.append(num)
-            self.back_tracking(combination_list, combines, i, target - num, candidates)
-            combines.pop()
-</code></pre><p><code>`</code><script src="https://unpkg.com/viz.js@2.1.2/viz.js"></script><script src="https://unpkg.com/viz.js@2.1.2/full.render.js"></script><textarea id="graphviz-0-code" style="display: none">digraph hierarchy {
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combinationSum</span><span class="params">(self, candidates, target)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type candidates: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[List[int]]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        combination_list = []</span><br><span class="line">        self.back_tracking(combination_list, [], <span class="number">0</span>, target, candidates)</span><br><span class="line">        <span class="keyword">return</span> combination_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">back_tracking</span><span class="params">(self, combination_list, combines, begin, target, candidates)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> target == <span class="number">0</span>:</span><br><span class="line">            combination_list.append(combines.copy())</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(begin, len(candidates)):</span><br><span class="line">            num = candidates[i]</span><br><span class="line">            <span class="keyword">if</span> num &lt;= target:</span><br><span class="line">                combines.append(num)</span><br><span class="line">                self.back_tracking(combination_list, combines, i, target - num, candidates)</span><br><span class="line">                combines.pop()</span><br></pre></td></tr></table></figure>
+<p><script src="https://unpkg.com/viz.js@2.1.2/viz.js"></script><script src="https://unpkg.com/viz.js@2.1.2/full.render.js"></script><textarea id="graphviz-0-code" style="display: none">digraph hierarchy {
     node [color=Black,fontname=Courier,shape=oval] //All nodes will this shape and colour
     nodesep=1.0 // increases the separation between nodes
     rank1 [style=invisible]

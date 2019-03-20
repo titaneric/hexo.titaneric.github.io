@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Playground">
 <meta property="og:description" content="Next Permutation (#31)DescriptionImplement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers. If such arrangement is not possible, it must rearr">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-19T04:56:52.231Z">
+<meta property="og:updated_time" content="2019-03-20T05:05:58.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Next-Permutation">
 <meta name="twitter:description" content="Next Permutation (#31)DescriptionImplement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers. If such arrangement is not possible, it must rearr">
@@ -235,6 +235,23 @@
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
 
   </li>
         
@@ -389,7 +406,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-19 04:56:52" itemprop="dateModified" datetime="2019-03-19T04:56:52+00:00">2019-03-19</time>
+                <time title="Modified: 2019-03-20 05:05:58" itemprop="dateModified" datetime="2019-03-20T05:05:58+00:00">2019-03-20</time>
               
             
           </span>
@@ -485,6 +502,7 @@
 <p>Space complexity: $O(1)$</p>
 <hr>
 <h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">nextPermutation</span><span class="params">(self, nums: <span class="string">'List[int]'</span>)</span> -&gt; '<span class="keyword">None</span>':</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        k = <span class="keyword">None</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums) - <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> nums[i] &gt; nums[i - <span class="number">1</span>]:</span><br><span class="line">                k = i</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            k = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> k:</span><br><span class="line">            swap = k - <span class="number">1</span></span><br><span class="line">            pre = nums[swap]</span><br><span class="line"></span><br><span class="line">            pivot = k</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(k + <span class="number">1</span>, len(nums)):</span><br><span class="line">                <span class="keyword">if</span> nums[i] &lt;= pre:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    pivot = i</span><br><span class="line"></span><br><span class="line">            nums[swap], nums[pivot] = nums[pivot], nums[swap]</span><br><span class="line"></span><br><span class="line">        nums[k:] = nums[k:][::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
