@@ -16,6 +16,7 @@ Major in Data Science
 ```graphviz
 digraph hierarchy {
     node [color=Black,fontname=consolus,shape=oval] //All nodes will this shape and colour
+    edge [splines=curved]
     "Fundamental skills"->"Programming language"
     "Programming language"->"Python 3"
     "Programming language"->"C++ 11"
@@ -23,6 +24,8 @@ digraph hierarchy {
     
     "Fundamental skills"->"Git"
     "Git"->"Git flow"
+    
+    "Fundamental skills"->"Basic Linux"
 }
 ```
 
@@ -34,6 +37,7 @@ digraph hierarchy {
     subgraph Web {
         "Web"->"frontend"
         "backend"->"Web"[dir=back]
+        "CI/CD"->"Web"[dir=back]
     }
     subgraph frontend {
         "frontend"->"Vue"
@@ -41,25 +45,39 @@ digraph hierarchy {
         
         "frontend"->"ES6"
         "ES6"->"airbnb"
+        
+        "frontend"->"CSS"
+        "CSS"->"bootstrap"
+        "CSS"->"ant design"
    }
     subgraph backend {
         "backend"->"framework"
         "framework"->"Laravel"
         "Laravel"->"PSR-2"
+        "Laravel"->"HTTP Test"
+        "Laravel"->"Faker"
+        "Laravel"->"ORM"
+        "Laravel"[dir=back]
+        "Validation"->"Laravel"[dir=back]
         
         "framework"->"Django"
         "Django"->"PEP8"
+        "Django"->"ORM"
         
         "backend"->"database"
-        "database"->"MySQL"
+        "MySQL"->"database"[dir=back]
         "database"->"MongoDB"
         
-        "backend"->"cache"
-        "cache"->"redis"
+        "cache"->"backend"[dir=back]
+        "redis"->"cache"[dir=back]
         
-        "backend"->"RESTful APIs"
+        "RESTful APIs"->"backend"[dir=back]
         
         "backend"->"crawler"
+    }
+    subgraph CI{
+        "Gitlab"->"CI/CD"[dir=back]
+        "Travis"->"CI/CD"[dir=back]
     }
 }
 ```
@@ -90,6 +108,7 @@ digraph hierarchy {
         "text"->"awk"
         "text"->"numpy"
         "text"->"pandas"
+        "text"->"regex"
     }
     subgraph audioPre{
         "audio"->"ffmpeg"
@@ -106,6 +125,8 @@ digraph hierarchy {
 
 - OSDI
 - Data Mining
+- Graph Theory
+- Theory of Computation
 
 ### Project
 
