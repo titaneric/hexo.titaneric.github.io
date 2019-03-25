@@ -14,6 +14,8 @@ Major in Data Science
 ## Web
 {% pdf ./web.pdf %}
 
+Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/developer-roadmap).
+
 ## Data Science
 {% pdf ./data-science.pdf %}
 
@@ -34,4 +36,4 @@ Major in Data Science
 - Data visulization
 - EZMusix
 
-Last Updated: 2019/03/25
+Last Updated: 2019/03/26
