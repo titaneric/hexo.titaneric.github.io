@@ -12,12 +12,12 @@ Major in Data Science
 # Skill tree
 
 ## Web
-{% pdf ./web.pdf %}
+![](./web.png)
 
 Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/developer-roadmap).
 
 ## Data Science
-{% pdf ./data-science.pdf %}
+![](./data-science.png)
 
 # Experience
 
@@ -36,4 +36,4 @@ Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/dev
 - Data visulization
 - EZMusix
 
-Last Updated: 2019/03/26
+Last Updated: 2019/04/02
