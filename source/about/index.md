@@ -19,6 +19,11 @@ Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/dev
 ## Data Science
 ![](./data-science.png)
 
+### Notation
+- Green: major
+- Yellow: experienced
+- Orange: learning
+
 # Experience
 
 ## Course
@@ -36,4 +41,4 @@ Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/dev
 - Data visulization
 - EZMusix
 
-Last Updated: 2019/04/02
+Last Updated: 2019/04/16
