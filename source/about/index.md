@@ -47,9 +47,9 @@ Have huge passion to learn something new from course, books and online course et
   - data visualization, data preprocessing
   - Google Charts, Django, Chart.js, bootstrap, JQuery
 - EZMusix
-  - Android APP with recommendation system for YouTube video based on the lyric content. Cluster the lyric sentiment using K-means and recommend 5 songs in same cluster for user.
+  - Android APP of recommendation system for YouTube video. Cluster the lyric sentiment using K-means and recommend 5 songs in same cluster to user, also provide add to favorite and history features.
   - Android APP, UI design, link APIs, crawler for data collection, data preprocessing, Restful API Design, model building
-  - YouTube API, Watson Tone API, Spotify developer API, Google Sign-In API, Recycle View, crawler, MongoDB, AsyncTask class
+  - YouTube API, Watson Tone API, Spotify developer API, Google Sign-In API, Musixmatch API, Recycle View, crawler, MongoDB, AsyncTask class
 
 ## Skills
 
