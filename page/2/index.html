@@ -342,6 +342,362 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/03/12/Binary-Tree-Paths/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eric Huang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Playground">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/12/Binary-Tree-Paths/" class="post-title-link" itemprop="url">Binary-Tree-Paths</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-12 00:54:14" itemprop="dateCreated datePublished" datetime="2019-03-12T00:54:14+00:00">2019-03-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-09-23 07:37:16" itemprop="dateModified" datetime="2019-09-23T07:37:16+00:00">2019-09-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Binary-Tree-Paths-257"><a href="#Binary-Tree-Paths-257" class="headerlink" title="Binary Tree Paths (#257)"></a><a href="https://leetcode.com/problems/binary-tree-paths/" target="_blank" rel="noopener">Binary Tree Paths (#257)</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Given a binary tree, return all root-to-leaf paths.</p>
+<p>Note: A leaf is a node with no children.</p>
+<hr>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line"></span><br><span class="line">   1</span><br><span class="line"> /   \</span><br><span class="line">2     3</span><br><span class="line"> \</span><br><span class="line">  5</span><br><span class="line"></span><br><span class="line">Output: [&quot;1-&gt;2-&gt;5&quot;, &quot;1-&gt;3&quot;]</span><br><span class="line"></span><br><span class="line">Explanation: All root-to-leaf paths are: 1-&gt;2-&gt;5, 1-&gt;3</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><p>Use the backtracking, again.</p>
+<ol>
+<li>If node is None, return.</li>
+<li>Check the incoming node, if it is leaf, then build the path.</li>
+<li>Otherwise, append the <strong>val</strong> to list, and do the recursive call with <strong>node.left</strong> and <strong>node.right</strong>.</li>
+<li>Then, pop the last element of list, return to last callee.</li>
+</ol>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/12/Binary-Tree-Paths/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/03/11/Letter-Combinations-of-a-Phone-Number/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Eric Huang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Playground">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/11/Letter-Combinations-of-a-Phone-Number/" class="post-title-link" itemprop="url">Letter-Combinations-of-a-Phone-Number</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-11 01:20:49" itemprop="dateCreated datePublished" datetime="2019-03-11T01:20:49+00:00">2019-03-11</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-09-23 07:37:16" itemprop="dateModified" datetime="2019-09-23T07:37:16+00:00">2019-09-23</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Letter-Combinations-of-a-Phone-Number-17"><a href="#Letter-Combinations-of-a-Phone-Number-17" class="headerlink" title="Letter Combinations of a Phone Number (#17)"></a><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank" rel="noopener">Letter Combinations of a Phone Number (#17)</a></h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Given a string containing digits from <code>2-9</code> inclusive, return all possible letter combinations that the number could represent.</p>
+<p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.</p>
+<p><img src="https://i.imgur.com/rmmhD3d.png" alt=""></p>
+<hr>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;23&quot;</span><br><span class="line">Output: [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><h3 id="Recursive-function"><a href="#Recursive-function" class="headerlink" title="Recursive function"></a>Recursive function</h3><ul>
+<li>Self called function</li>
+<li>Need to define the terminated condition and return</li>
+</ul>
+<h3 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h3><ul>
+<li>Recursive function</li>
+<li>Only return when reached the boundary condition (e.g., array tail and tree leaf reached)</li>
+</ul>
+<hr>
+<h3 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h3><ul>
+<li>Similar to DFS, but when you get the result, you need to continue to get the next solution.</li>
+<li>Useful trick to solve combination-related problem</li>
+<li>When getting the satisfied result, need to <strong>backtracking</strong> to last caller.</li>
+</ul>
+<hr>
+<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><ol>
+<li>Check the length of incoming combination. If it equals to the digits length, go to 2. Otherwise, goto 3.</li>
+<li>Save the combination and return to its caller (i.e. goto 3.2).</li>
+<li>Use the length of combination to access digit, iterate all mapping characters<br> 3.1 Push the character into combination and goto 1.<br> 3.2 Pop the last element of combination, and goto 3.</li>
+</ol>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/11/Letter-Combinations-of-a-Phone-Number/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://titaneric.github.io/2019/02/26/Permutation-Sequence/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -404,7 +760,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-09-22 16:40:19" itemprop="dateModified" datetime="2019-09-22T16:40:19+00:00">2019-09-22</time>
+                <time title="Modified: 2019-09-23 07:37:16" itemprop="dateModified" datetime="2019-09-23T07:37:16+00:00">2019-09-23</time>
               
             
           </span>
@@ -577,7 +933,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-09-22 16:40:19" itemprop="dateModified" datetime="2019-09-22T16:40:19+00:00">2019-09-22</time>
+                <time title="Modified: 2019-09-23 07:37:16" itemprop="dateModified" datetime="2019-09-23T07:37:16+00:00">2019-09-23</time>
               
             
           </span>
@@ -741,7 +1097,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-09-22 16:40:19" itemprop="dateModified" datetime="2019-09-22T16:40:19+00:00">2019-09-22</time>
+                <time title="Modified: 2019-09-23 07:37:16" itemprop="dateModified" datetime="2019-09-23T07:37:16+00:00">2019-09-23</time>
               
             
           </span>
@@ -912,7 +1268,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-09-22 16:40:19" itemprop="dateModified" datetime="2019-09-22T16:40:19+00:00">2019-09-22</time>
+                <time title="Modified: 2019-09-23 07:37:16" itemprop="dateModified" datetime="2019-09-23T07:37:16+00:00">2019-09-23</time>
               
             
           </span>
@@ -1079,7 +1435,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-09-22 16:40:19" itemprop="dateModified" datetime="2019-09-22T16:40:19+00:00">2019-09-22</time>
+                <time title="Modified: 2019-09-23 07:37:16" itemprop="dateModified" datetime="2019-09-23T07:37:16+00:00">2019-09-23</time>
               
             
           </span>
@@ -1243,7 +1599,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-09-22 16:40:19" itemprop="dateModified" datetime="2019-09-22T16:40:19+00:00">2019-09-22</time>
+                <time title="Modified: 2019-09-23 07:37:16" itemprop="dateModified" datetime="2019-09-23T07:37:16+00:00">2019-09-23</time>
               
             
           </span>
@@ -1379,7 +1735,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1408,7 +1764,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1592,6 +1950,10 @@
 
   
   
+    
+      
+    
+      
     
       
     
