@@ -24,6 +24,19 @@ Have huge passion to learn something new from course, books and online course et
   - Form validation, Database table design, API implementation, link reCAPTCHA v3 API, Unit Test
   - Git, Laravel, Vue, Gitlab CI/CD, PHPUnit
 
+### Open Source Contribution
+
+- Find the redundant calculation of derivative of power function across various deep learning framework.
+  - [PyTorch](https://github.com/pytorch/pytorch/pull/28651)
+  - [JAX](https://github.com/google/jax/pull/1578)
+  - [Autograd](https://github.com/HIPS/autograd/pull/541)
+- Make some code to be more Pythonic
+  - [TensorFlow](https://github.com/tensorflow/tensorflow/pull/32126)
+- Bug report
+  - [Python extension for Visual Studio Code](https://github.com/microsoft/vscode-python/issues/202)
+- Participation of issue dicussion
+  - [Windows Subsystem for Linux](https://github.com/MicrosoftDocs/WSL/issues/404#issuecomment-504759326)
+
 ### Project
 
 - [Account System](https://account.cs.nctu.edu.tw/)
@@ -89,4 +102,4 @@ Greatly influenced from [how data science resume cv](https://www.dataquest.io/bl
 
 Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/developer-roadmap).
 
-Last Updated: 2019/09/23
+Last Updated: 2019/11/02
