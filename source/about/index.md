@@ -90,7 +90,14 @@ Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/dev
 
 ## Resume
 
+### English version
+
 {% pdf ./english_resume.pdf
+%}
+
+### Chinese version
+
+{% pdf ./chinese_resume.pdf
 %}
 
 Last Updated: 2020/02/11
