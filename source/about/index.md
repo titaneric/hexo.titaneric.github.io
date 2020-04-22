@@ -43,13 +43,14 @@ Have huge passion to learn something new from course, books and online course et
 
 - Music Recommendation System
   - Recommendation System using KKBox WSDM data
-  - Collected the additional data from Spotify and preprocessing.
-  - Implemented the web-based interface to visualize the recommendation and compare them to user preference.
+  - Collected the additional data from Spotify and preprocessing them.
+  - Implemented the web-based interface to visualize the recommendation and user preference.
 - [AutoDiff from scratch](https://github.com/titaneric/AutoDiff-from-scratch)
+  - Simple neural network library supporting auto-differentiation
   - Reported an issue and solve it in various deep-learning library during the development.
   - Enabled high-level layer usage and have already tested on real-world dataset.
 - [Account Application System](https://account.cs.nctu.edu.tw/)
-  - Account Applying System for NCTU CS students
+  - Web service for NCTU CS students to apply their account
   - Developed in Laravel MVC architecture  with additional Repository pattern.
   - Designed the database schema.
   - Implemented the business logic and account-activation-status API.
