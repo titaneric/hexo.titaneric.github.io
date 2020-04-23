@@ -100,4 +100,4 @@ Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/dev
 {% pdf ./chinese_resume.pdf
 %}
 
-Last Updated: 2020/04/22
+Last Updated: 2020/04/23
