@@ -92,12 +92,12 @@ Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/dev
 
 ### English version
 
-{% pdf ./english_resume.pdf
+{% pdf ./eg_resume.pdf
 %}
 
 ### Chinese version
 
-{% pdf ./chinese_resume.pdf
+{% pdf ./tw_resume.pdf
 %}
 
 
@@ -106,4 +106,4 @@ Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/dev
 {% pdf ./bio.pdf
 %}
 
-Last Updated: 2020/05/12
+Last Updated: 2020/07/20
