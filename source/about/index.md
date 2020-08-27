@@ -4,24 +4,15 @@ date: 2019-03-20 12:27:55
 type: "about"
 ---
 
-## Background
-
-Currently studying master degree at National Chiao Tung University, Taiwan
-Major in Data Science
-
 ## Profile
 
-Interested in data preprocessing(especially for text) and visualization, optimization problem and web development.
-
-Try to learn the math behind the ML or DL as much as possible.
-
-Have huge passion to learn something new from course, books and online course etc.
+Persistent learner, dedicated graduate who major in data science. Skilled in data wrangling, machine learning knowledge and data visualization. Strong in Python and experienced with large-scale software code reading and tracing (E.g., CPython, [PyTorch](\https://github.com/pytorch/pytorch/pull/28651) & [Buddy System in Linux kernel](https://titaneric.github.io/2019/09/23/Buddy-system/)).
 
 ## Experience
 
 ### Work
 
-- Web TA at NCTU CSCC [July 2018–Jan 2019]
+- Web Developer at NCTU CSCC [July 2018–Jan 2019]
   - Developed the web service, especially for [Account Application System](https://account.cs.nctu.edu.tw/).
   - Implemented in Laravel and Vue frameworks.
   - Applied Git flow on development and Gitlab runner to automate the test and deployment jobs.
@@ -41,6 +32,10 @@ Have huge passion to learn something new from course, books and online course et
 
 ### Project
 
+- Real-time Traffic Anomaly Detector
+  - Anomaly detection in NCTU administration networks.
+  - Designed and implemented the data pre-processing pipeline with Apache Kafka, Spark and MongoDB.
+  - Processed data-stream in real time up to **30 kB/sec** and transformed into feature vectors to further predict
 - Music Recommendation System
   - Recommendation System using KKBox WSDM data
   - Collected the additional data from Spotify and preprocessing them.
@@ -106,4 +101,4 @@ Greatly influenced from [developer-roadmap](https://github.com/kamranahmedse/dev
 {% pdf ./bio.pdf
 %}
 
-Last Updated: 2020/07/20
+Last Updated: 2020/08/27
