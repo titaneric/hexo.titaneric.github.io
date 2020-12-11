@@ -12,6 +12,9 @@ Persistent learner, dedicated graduate who major in data science. Skilled in dat
 
 ### Work
 
+- CIM Automation Engineer at tsmc [Oct 2020-Present]
+  - Developed the general resume parser and achieved up to *95%* item accuracy
+  - Wrote unit-test, documents for prior's project.
 - Web Developer at NCTU CSCC [July 2018–Jan 2019]
   - Developed the web service, especially for [Account Application System](https://account.cs.nctu.edu.tw/).
   - Implemented in Laravel and Vue frameworks.
