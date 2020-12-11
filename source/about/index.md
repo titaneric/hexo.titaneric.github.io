@@ -26,6 +26,8 @@ Persistent learner, dedicated graduate who major in data science. Skilled in dat
   - [PyTorch](https://github.com/pytorch/pytorch/pull/28651)
   - [JAX](https://github.com/google/jax/pull/1578)
   - [Autograd](https://github.com/HIPS/autograd/pull/541)
+- Improved and beautified one of the example
+  - [Yew](https://github.com/yewstack/yew/pull/1650)
 - Developed some code to be more Pythonic
   - [TensorFlow](https://github.com/tensorflow/tensorflow/pull/32126)
 - Bug reporting
